@@ -1,0 +1,58 @@
+/* Sidebar.css */
+
+/* Base sidebar styling */
+.sidebar {
+    width: 240px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Sidebar hidden (for small screens) */
+  .sidebar-hidden {
+    transform: translateX(-100%);
+  }
+  
+  /* Sidebar visible (for small screens when toggled) */
+  .sidebar-visible {
+    transform: translateX(0);
+  }
+  
+  /* Hamburger menu styling */
+  .menu-icon {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1300;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive behavior */
+  
+  /* Small screens (max-width: 960px) */
+  @media only screen and (max-width: 960px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+  /* Large screens (min-width: 961px) */
+  @media only screen and (min-width: 961px) {
+    .sidebar-hidden {
+      transform: translateX(0); /* Always visible on large screens */
+    }
+  
+    .menu-icon {
+      display: none; /* Hide hamburger menu */
+    }
+  }
+  
